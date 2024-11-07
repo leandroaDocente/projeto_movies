@@ -1,5 +1,6 @@
 import { count } from 'console';
 import { title } from 'process';
+import './styles.css';
 
 function Form() {
   const movies = {
@@ -11,13 +12,14 @@ function Form() {
     score: 4.0,
   };
   return (
-    <div className="movies-form-cotainer">
+    <div className="movies-form-container">
       <img
+        className="movies-card-image"
         src={movies.image}
-        alt="Os fantasmas ainda se divertem: Beetlejuice Beetlejuice"
+        alt={movies.title}
       />
       <div className="movies-card-bottom-container">
-        <h3>Os fantasmas ainda se divertem: Beetlejuice Beetlejuice</h3>
+        <h3>{movies.title}</h3>
         <form className="movies-form">
           <div className="form-group movies-form-group">
             <label htmlFor="email">Informe seu e-mail</label>
@@ -33,10 +35,11 @@ function Form() {
               <option>5</option>
             </select>
           </div>
-          <div className="movies-form-btn-container" />
-          <button className="btn movies-btn" type="submit">
-            SALVAR
-          </button>
+          <div className="movies-form-btn-container">
+            <button className="btn movies-btn" type="submit">
+              SALVAR
+            </button>
+          </div>
         </form>
         <button className="btn movies-btn mt-3">CANCELAR</button>
       </div>
