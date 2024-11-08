@@ -47,7 +47,7 @@
 
 .movies-btn {
   background-color: #242a32;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 700;
   height: 50px;
